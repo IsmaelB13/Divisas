@@ -22,41 +22,45 @@ public class divisas {
         convertirBTN.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                switch (origenCB.getSelectedIndex()){
-                    case 1:
-                    {
-                        double[] tarifasMexico={1,};
-                        double tarifaseleccionada=tarifasMexico[destinoCB.getSelectedIndex()];
-                        double resultado=Double.parseDouble(origenTF.getText())*tarifaseleccionada;
-                        destinoTF.setText(""+resultado);
+                switch (origenCB.getSelectedIndex()) {
+                    case 1: {
+                        double[] usd = {1, 20.40, 0.98, 0.82, 902.48};
+                        double tarifaseleccionada = usd[destinoCB.getSelectedIndex()];
+                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
+                        destinoTF.setText("" + resultado);
                         break;
                     }
-                    case 2:
-                    {
-                        double[] tarifasColombia={0.0046 ,1,0.00023,0.00089,0.00033 };
-                        double tarifaseleccionada=tarifasColombia[destinoCB.getSelectedIndex()];
-                        double resultado=Double.parseDouble(origenTF.getText())*tarifaseleccionada;
-                        destinoTF.setText(""+resultado);
+                    case 2: {
+                        double[] euro = {0.98,1,0.84,20.82,938.87};
+                        double tarifaseleccionada = euro[destinoCB.getSelectedIndex()];
+                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
+                        destinoTF.setText("" + resultado);
                         break;
                     }
-                    case 3:
-                    {
-                        double[] tarifasSOl={5.17,1115.44 ,0.25 ,1,0.36  };
-                        double tarifaseleccionada=tarifasSOl[destinoCB.getSelectedIndex()];
-                        double resultado=Double.parseDouble(origenTF.getText())*tarifaseleccionada;
-                        destinoTF.setText(""+resultado);
+                    case 3: {
+                        double[] libra = {5.17, 1115.44, 0.25, 1, 0.36};
+                        double tarifaseleccionada = libra[destinoCB.getSelectedIndex()];
+                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
+                        destinoTF.setText("" + resultado);
                         break;
                     }
-                    case 4:
-                    {
-                        double[] tarifasAustralia={14.20,3056.61,0.70,2.74 ,1};
-                        double tarifaseleccionada=tarifasAustralia[destinoCB.getSelectedIndex()];
-                        double resultado=Double.parseDouble(origenTF.getText())*tarifaseleccionada;
-                        destinoTF.setText(""+resultado);
+                    case 4: {
+                        double[] mxm = {14.20, 3056.61, 0.70, 2.74, 1};
+                        double tarifaseleccionada = mxm[destinoCB.getSelectedIndex()];
+                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
+                        destinoTF.setText("" + resultado);
+                        break;
+                    }
+                    case 5: {
+                        double[] chile = {14.20, 3056.61, 0.70, 2.74, 1};
+                        double tarifaseleccionada = chile[destinoCB.getSelectedIndex()];
+                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
+                        destinoTF.setText(" " + resultado);
                         break;
                     }
                 }
-            }
+                }
+
         });
     }
         public static void main (String[]args){
