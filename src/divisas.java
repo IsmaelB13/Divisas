@@ -23,36 +23,36 @@ public class divisas {
             @Override
             public void actionPerformed(ActionEvent e) {
                 switch (origenCB.getSelectedIndex()) {
-                    case 1: {
-                        double[] usd = {1, 20.40, 0.98, 0.82, 902.48};
+                    case 0: {
+                        double[] usd = {1, 20.38, 0.92, 20.38, 901.10};
                         double tarifaseleccionada = usd[destinoCB.getSelectedIndex()];
                         double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
-                        destinoTF.setText("" + resultado);
+                        destinoTF.setText(" " + resultado);
+                        break;
+                    }
+                    case 1: {
+                        double[] euro = {1.02, 1, 0.84, 20.85, 921.65};
+                        double tarifaseleccionada = euro[destinoCB.getSelectedIndex()];
+                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
+                        destinoTF.setText(" " + resultado);
                         break;
                     }
                     case 2: {
-                        double[] euro = {0.98,1,0.84,20.82,938.87};
-                        double tarifaseleccionada = euro[destinoCB.getSelectedIndex()];
+                        double[] libra = {1.22, 1.19, 1, 24.84, 1098.20};
+                        double tarifaseleccionada = libra[destinoCB.getSelectedIndex()];
                         double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
-                        destinoTF.setText("" + resultado);
+                        destinoTF.setText(" " + resultado);
                         break;
                     }
                     case 3: {
-                        double[] libra = {5.17, 1115.44, 0.25, 1, 0.36};
-                        double tarifaseleccionada = libra[destinoCB.getSelectedIndex()];
+                        double[] mxm = {0.049, 0.048, 0.040, 1, 44.22};
+                        double tarifaseleccionada = mxm[destinoCB.getSelectedIndex()];
                         double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
-                        destinoTF.setText("" + resultado);
+                        destinoTF.setText(" " + resultado);
                         break;
                     }
                     case 4: {
-                        double[] mxm = {14.20, 3056.61, 0.70, 2.74, 1};
-                        double tarifaseleccionada = mxm[destinoCB.getSelectedIndex()];
-                        double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
-                        destinoTF.setText("" + resultado);
-                        break;
-                    }
-                    case 5: {
-                        double[] chile = {14.20, 3056.61, 0.70, 2.74, 1};
+                        double[] chile = {0.0011, 0.0011, 0.00091, 0.023,1};
                         double tarifaseleccionada = chile[destinoCB.getSelectedIndex()];
                         double resultado = Double.parseDouble(origenTF.getText()) * tarifaseleccionada;
                         destinoTF.setText(" " + resultado);
